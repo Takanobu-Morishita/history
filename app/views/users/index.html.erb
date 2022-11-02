@@ -29,16 +29,13 @@
                   <div class="title"><%=link_to user.username, user_path(user) %></div>
                 </div>
               </div>
+              <div class="content">
+                投稿数：<%= user.documents.count %>
+              </div>
             </div>
           </div>
         </div>
       <% end %>
     </div>
   </div>
-</section><h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-
-<% @users.each do |user| %>
-<%= attachment_image_tag user, :profile_image, fallback: "no-image.png" %>
-<%= user.username %>
-<% end %>
+</section>
