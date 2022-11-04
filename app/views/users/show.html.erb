@@ -29,7 +29,10 @@
                   <%= @user.email %>
                 </td>
                 <td>
-                    <%= link_to "編集", edit_user_path(@user), class: "button is-primary" %>
+                  <%= link_to "編集", edit_user_path(@user), class: "button is-primary" %>
+                </td>
+                <td>
+                  <%= link_to "退会",user_path(current_user.id), class: "button is-primary", method: :delete, "data-confirm" => "本当に退会しますか？" %>
                 </td>
                 <% end %>
               </tr>

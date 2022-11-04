@@ -24,8 +24,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:notice] = 'ユーザーを削除しました。'
+    redirect_to :root
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :email, :profile, :profile_image)
+  end
+
+  def self_user
+    @user = User.find_by(:id => params[:id])
   end
 end
