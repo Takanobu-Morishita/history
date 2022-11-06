@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Morishigram</title>
+    <title>history.com</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -26,7 +26,7 @@
     <nav class="navbar is-warning">
       <div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
-          <h1 class="title is-4" style="font-family: cursive;">morishigram</h1>
+          <h1 class="title is-4" style="font-family: cursive;">history.com</h1>
         <% end %>
         <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
           <span></span>
@@ -38,17 +38,17 @@
       <% if user_signed_in? %>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "レシピ一覧", documents_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "投稿一覧", documents_path, class: "navbar-item button is-warning is-light" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "レシピ投稿", new_document_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "投稿", new_document_path, class: "navbar-item button is-warning is-light" %>
           </div>
 
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                  <%= link_to "モリシグラマー一覧", users_path, class: " button is-warning is-light" %>
+                  <%= link_to "投稿者一覧", users_path, class: " button is-warning is-light" %>
                 </p>
                 <p class="control">
                   <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light" %>
@@ -63,10 +63,10 @@
       <% else %>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-            <%= link_to "レシピ一覧", documents_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "投稿一覧", documents_path, class: "navbar-item button is-warning is-light" %>
           </div>
           <div class="navbar-item">
-            <%= link_to "モリシグラマー一覧", users_path, class: "navbar-item button is-warning is-light" %>
+            <%= link_to "投稿者一覧", users_path, class: "navbar-item button is-warning is-light" %>
           </div>
           <div class="navbar-end">
             <div class="navbar-item">
